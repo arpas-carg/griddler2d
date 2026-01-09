@@ -23,7 +23,9 @@ defmodule Griddler2d.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:geo, "~> 4.1.0", optional: true, only: :dev}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:geo, "~> 4.1.0", optional: true, only: :dev},
+      {:xml_builder, "~> 2.4", optional: true, only: :dev}
     ]
   end
 end

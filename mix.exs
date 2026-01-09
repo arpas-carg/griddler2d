@@ -9,7 +9,21 @@ defmodule Griddler2d.MixProject do
       version: @version,
       elixir: "~> 1.19",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases(),
+      description: description(),
+      package: package()
+    ]
+  end
+
+  defp description do
+    "Helpers"
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/arpas-carg/griddler2d"}
     ]
   end
 
@@ -26,6 +40,12 @@ defmodule Griddler2d.MixProject do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:geo, "~> 4.1.0", optional: true, only: :dev},
       {:xml_builder, "~> 2.4", optional: true, only: :dev}
+    ]
+  end
+
+  defp aliases do
+    [
+      wv: ["Griddler2D -awv"]
     ]
   end
 end

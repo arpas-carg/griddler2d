@@ -1,7 +1,7 @@
 defmodule Griddler2d.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -38,8 +38,8 @@ defmodule Griddler2d.MixProject do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:geo, "~> 4.1.0", optional: true, only: :dev},
-      {:xml_builder, "~> 2.4", optional: true, only: :dev}
+      {:geo, "~> 4.1.0"},
+      {:xml_builder, "~> 2.1"}
     ]
   end
 

@@ -4,7 +4,7 @@ defmodule Griddler2D.Adapters.SVG do
   alias Griddler2D.Cell
   alias Griddler2D.Line
 
-  require XmlBuilder
+  alias XmlBuilder
 
   @doc """
   Converte una cella in un elemento <polygon> SVG
@@ -15,7 +15,7 @@ defmodule Griddler2D.Adapters.SVG do
       |> Enum.map(fn {x, y} -> "#{x},#{y}" end)
       |> Enum.join(" ")
 
-    XmlBuilder.element(:polygon, %{points: points})
+    XmlBuilder.element(:polygon, points: points)
   end
 
   @doc """

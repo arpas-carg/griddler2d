@@ -3,5 +3,13 @@
 ## Section
 
 ```elixir
+alias Griddler2D.Core, as: Gc
+```
 
+```elixir
+grid = Gc.build_grid(1,1)
+```
+
+```elixir
+Gc.lines(grid)
 ```

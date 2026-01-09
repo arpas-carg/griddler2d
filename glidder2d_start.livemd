@@ -3,13 +3,37 @@
 ## Section
 
 ```elixir
+alias Kino
+```
+
+```elixir
 alias Griddler2D.Core, as: Gc
+alias Griddler2D.Adapters.Geo
+alias Griddler2D.Adapters.SVG
 ```
 
 ```elixir
-grid = Gc.build_grid(1,1)
+grid = Gc.build_grid(4,6)
 ```
 
 ```elixir
-Gc.lines(grid)
+cells = Gc.cells(grid)
+```
+
+```elixir
+lines = Gc.lines(grid)
+```
+
+```elixir
+lines
+|> Enum.map(&SVG.line_to_element/1)
+|> SVG.to_svg()
+|> Kino.Image.new(:svg)
+```
+
+```elixir
+cells
+|> Enum.map(&SVG.cell_to_element/1)
+|> SVG.to_svg()
+|> Kino.Image.new(:svg)
 ```

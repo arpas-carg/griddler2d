@@ -38,6 +38,7 @@ defmodule Griddler2d.MixProject do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:kino, "~> 0.18.0", only: :dev},
       {:geo, "~> 4.1.0"},
       {:xml_builder, "~> 2.1"}
     ]

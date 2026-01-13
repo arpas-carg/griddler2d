@@ -1,4 +1,4 @@
-versione=`0.1.0`
+versione=`0.1.2`
 
 crea:
 	mix hex.build

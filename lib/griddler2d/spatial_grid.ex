@@ -1,13 +1,13 @@
 defmodule Griddler2D.SpatialGrid do
   def make(vertex_list) do
+    lista = Map.to_list(vertex_list)
+
     spatial_grid =
-      Enum.reduce(vertex_list, %{}, fn
-        mappa, acc ->
-          [{k, v}] = Map.to_list(mappa)
-          Map.put(acc, k, v)
+      Enum.reduce(lista, %{}, fn {k, v}, acc ->
+        Map.put(acc, k, v)
       end)
 
-    if length(vertex_list) == length(Map.keys(spatial_grid)) do
+    if length(lista) == length(Map.keys(spatial_grid)) do
       spatial_grid
     else
       raise("Chiavi doppia.")

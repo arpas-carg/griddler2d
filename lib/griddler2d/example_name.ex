@@ -1,4 +1,4 @@
-defmodule Griddlers2d.ExampleNames do
+defmodule Griddler2D.ExampleName do
   def griglia_nomi(griglia_suddivide) do
     case griglia_suddivide do
       :ctr10 ->

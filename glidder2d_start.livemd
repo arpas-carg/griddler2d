@@ -7,13 +7,16 @@ alias Kino
 ```
 
 ```elixir
-alias Griddler2D.Core, as: Gc
-alias Griddler2D.Adapters.Geo
-alias Griddler2D.Adapters.SVG
+alias Griddlers2d.
+Grid.make(2,2)
 ```
 
 ```elixir
-grid = Gc.build_grid(4,6)
+
+```
+
+```elixir
+grid = Gc.build_grid(2,1)
 ```
 
 ```elixir

@@ -5,6 +5,4 @@ crea:
 	git tag -a $(versione) -m $(versione)
 	git push origin $(versione)
 pub: 
-	mix hex.publish
-tag: 
-	git tag -a $(versione) -m  $(versione)
+	mix hex.publish --force
